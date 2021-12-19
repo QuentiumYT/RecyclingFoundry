@@ -36,3 +36,13 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
+tasks.register('dev', Copy) {
+    group('development')
+    outputs.upToDateWhen { false }
+    dependsOn ':build'
+    from(file('build/libs/' + name + '-' + version + '.jar'))
+    into(file('C:\\Users\\Quentin\\Downloads\\srv_test\\plugins'))
+    rename { String fileName ->
+        fileName.replace(name + '-' + version + '.jar', name + ".jar")
+    }
+}
