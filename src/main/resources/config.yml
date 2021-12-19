@@ -1,0 +1,73 @@
+messages:
+  no-permission: '&cYou must be admin or have the correct permissions to use this command.'
+
+NetheriteSword: true
+NetheritePickaxe: true
+NetheriteAxe: true
+NetheriteShovel: true
+NetheriteHoe: true
+NetheriteBoots: true
+NetheriteHelmet: true
+NetheriteChestplate: true
+NetheriteLeggings: true
+
+DiamondSword: true
+DiamondPickaxe: true
+DiamondAxe: true
+DiamondShovel: true
+DiamondHoe: true
+DiamondHelmet: true
+DiamondChestplate: true
+DiamondBoots: true
+DiamondLeggings: true
+
+GoldSword: true
+GoldPickaxe: true
+GoldAxe: true
+GoldShovel: true
+GoldHoe: true
+GoldHelmet: true
+GoldChestplate: true
+GoldLeggings: true
+GoldBoots: true
+
+IronSword: true
+IronPickaxe: true
+IronAxe: true
+IronShovel: true
+IronHoe: true
+IronHelmet: true
+IronChestplate: true
+IronLeggings: true
+IronBoots: true
+
+StoneSword: true
+StonePickaxe: true
+StoneAxe: true
+StoneShovel: true
+StoneHoe: true
+
+WoodSword: true
+WoodPickaxe: true
+WoodAxe: true
+WoodShovel: true
+WoodHoe: true
+
+DiamondHorseArmor: true
+
+Clock: true
+GoldHorseArmor: true
+
+IronBars: true
+IronDoor: true
+IronTrapDoor: true
+IronHorseArmor: true
+
+Bucket: true
+Shears: true
+Chain: true
+Minecart: true
+Cauldron: true
+
+RottenFlesh: true
+PoisonousPotato: true
