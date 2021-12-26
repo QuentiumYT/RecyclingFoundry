@@ -27,7 +27,7 @@ public class MainCommand implements CommandExecutor {
                     sender.sendMessage(Utils.chat("&a/recyclingfoundry help &7- Shows this page."));
                     sender.sendMessage(Utils.chat("&a/recyclingfoundry reload &7- Reload the plugin config."));
                     sender.sendMessage("");
-                    sender.sendMessage(Utils.chat("&8Version 1.0 by Creepercraft_67"));
+                    sender.sendMessage(Utils.chat("&8Version 1.1 by Creepercraft_67"));
                     return true;
                 }
                 if (args[0].equalsIgnoreCase("reload")) {
