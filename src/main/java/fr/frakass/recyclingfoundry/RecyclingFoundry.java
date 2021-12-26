@@ -126,31 +126,31 @@ public class RecyclingFoundry extends JavaPlugin implements Listener {
 
         switch (e.getSource().getType()) {
             case NETHERITE_SWORD:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+                e.setResult(new ItemStack(Material.NETHERITE_SCRAP, (int) (4 * durabilityPercent)));
                 break;
             case NETHERITE_PICKAXE:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+                e.setResult(new ItemStack(Material.NETHERITE_SCRAP, (int) (4 * durabilityPercent)));
                 break;
             case NETHERITE_AXE:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+                e.setResult(new ItemStack(Material.NETHERITE_SCRAP, (int) (4 * durabilityPercent)));
                 break;
             case NETHERITE_SHOVEL:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+                e.setResult(new ItemStack(Material.NETHERITE_SCRAP, (int) (4 * durabilityPercent)));
                 break;
             case NETHERITE_HOE:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+                e.setResult(new ItemStack(Material.NETHERITE_SCRAP, (int) (4 * durabilityPercent)));
                 break;
             case NETHERITE_HELMET:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+                e.setResult(new ItemStack(Material.NETHERITE_SCRAP, (int) (4 * durabilityPercent)));
                 break;
             case NETHERITE_CHESTPLATE:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+                e.setResult(new ItemStack(Material.NETHERITE_SCRAP, (int) (4 * durabilityPercent)));
                 break;
             case NETHERITE_LEGGINGS:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+                e.setResult(new ItemStack(Material.NETHERITE_SCRAP, (int) (4 * durabilityPercent)));
                 break;
             case NETHERITE_BOOTS:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+                e.setResult(new ItemStack(Material.NETHERITE_SCRAP, (int) (4 * durabilityPercent)));
                 break;
 
             case DIAMOND_SWORD:
