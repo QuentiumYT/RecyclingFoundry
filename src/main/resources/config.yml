@@ -1,6 +1,7 @@
 messages:
   no-permission: '&cYou must be admin or have the correct permissions to use this command.'
 
+# Tools, weapons & armors
 NetheriteSword: true
 NetheritePickaxe: true
 NetheriteAxe: true
@@ -53,21 +54,43 @@ WoodAxe: true
 WoodShovel: true
 WoodHoe: true
 
+# Items & blocks
+Lodestone: true
+
 DiamondHorseArmor: true
+EnchantingTable: true
+Jukebox: true
 
-Clock: true
 GoldHorseArmor: true
+LightWeightedPressurePlate: true
+PoweredRail: true
+Clock: true
 
+IronHorseArmor: true
+HeavyWeightedPressurePlate: true
+ActivatorRail: true
+DetectorRail: true
+Rail: true
 IronBars: true
 IronDoor: true
 IronTrapDoor: true
-IronHorseArmor: true
-
-Bucket: true
-Shears: true
-Chain: true
-Minecart: true
+Anvil: true
 Cauldron: true
+BlastFurnace: true
+SmithingTable: true
+StoneCutter: true
+Lantern: true
+Chain: true
+TripwireHook: true
+Hopper: true
+Compass: true
+Shears: true
+Bucket: true
+Minecart: true
+FlintAndSteel: true
+Crossbow: true
+Shield: true
 
 RottenFlesh: true
+
 PoisonousPotato: true

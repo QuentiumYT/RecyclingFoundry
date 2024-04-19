@@ -38,6 +38,7 @@ public class RecyclingFoundry extends JavaPlugin implements Listener {
     }
 
     public void loadRecipes() {
+        // Tools, weapons & armors
         // Netherite
         registerRecipe("NetheriteSword", Material.NETHERITE_SWORD, Material.NETHERITE_INGOT, 1);
         registerRecipe("NetheritePickaxe", Material.NETHERITE_PICKAXE, Material.NETHERITE_INGOT, 1);
@@ -96,20 +97,46 @@ public class RecyclingFoundry extends JavaPlugin implements Listener {
         registerRecipe("WoodShovel", Material.WOODEN_SHOVEL, Material.OAK_PLANKS, 1);
         registerRecipe("WoodHoe", Material.WOODEN_HOE, Material.OAK_PLANKS, 2);
 
-        registerRecipe("DiamondHorseArmor", Material.DIAMOND_HORSE_ARMOR, Material.DIAMOND, 3);
+        // Items & blocks
+        // Netherite
+        registerRecipe("Lodestone", Material.LODESTONE, Material.NETHERITE_INGOT, 1);
 
+        // Diamond
+        registerRecipe("DiamondHorseArmor", Material.DIAMOND_HORSE_ARMOR, Material.DIAMOND, 3);
+        registerRecipe("EnchantingTable", Material.ENCHANTING_TABLE, Material.DIAMOND, 2);
+        registerRecipe("Jukebox", Material.JUKEBOX, Material.DIAMOND, 1);
+
+        // Gold
         registerRecipe("GoldHorseArmor", Material.GOLDEN_HORSE_ARMOR, Material.GOLD_INGOT, 3);
+        registerRecipe("LightWeightedPressurePlate", Material.LIGHT_WEIGHTED_PRESSURE_PLATE, Material.GOLD_INGOT, 2);
+        registerRecipe("PoweredRail", Material.POWERED_RAIL, Material.GOLD_INGOT, 1);
         registerRecipe("Clock", Material.CLOCK, Material.GOLD_INGOT, 4);
 
+        // Iron
         registerRecipe("IronHorseArmor", Material.IRON_HORSE_ARMOR, Material.IRON_INGOT, 3);
+        registerRecipe("HeavyWeightedPressurePlate", Material.HEAVY_WEIGHTED_PRESSURE_PLATE, Material.IRON_INGOT, 2);
+        registerRecipe("ActivatorRail", Material.ACTIVATOR_RAIL, Material.IRON_INGOT, 1);
+        registerRecipe("DetectorRail", Material.DETECTOR_RAIL, Material.IRON_INGOT, 1);
+        registerRecipe("Rail", Material.RAIL, Material.IRON_NUGGET, 3);
         registerRecipe("IronBars", Material.IRON_BARS, Material.IRON_NUGGET, 3);
         registerRecipe("IronDoor", Material.IRON_DOOR, Material.IRON_INGOT, 2);
         registerRecipe("IronTrapDoor", Material.IRON_TRAPDOOR, Material.IRON_INGOT, 4);
+        registerRecipe("Anvil", Material.ANVIL, Material.IRON_INGOT, 31);
+        registerRecipe("Cauldron", Material.CAULDRON, Material.IRON_INGOT, 7);
+        registerRecipe("BlastFurnace", Material.BLAST_FURNACE, Material.IRON_INGOT, 5);
+        registerRecipe("SmithingTable", Material.SMITHING_TABLE, Material.IRON_INGOT, 2);
+        registerRecipe("StoneCutter", Material.STONECUTTER, Material.IRON_INGOT, 1);
+        registerRecipe("Lantern", Material.LANTERN, Material.IRON_NUGGET, 8);
+        registerRecipe("Chain", Material.CHAIN, Material.IRON_NUGGET, 11);
+        registerRecipe("TripwireHook", Material.TRIPWIRE_HOOK, Material.IRON_NUGGET, 4);
+        registerRecipe("Hopper", Material.HOPPER, Material.IRON_INGOT, 5);
+        registerRecipe("Compass", Material.COMPASS, Material.IRON_INGOT, 4);
         registerRecipe("Shears", Material.SHEARS, Material.IRON_INGOT, 2);
         registerRecipe("Bucket", Material.BUCKET, Material.IRON_INGOT, 3);
-        registerRecipe("Chain", Material.CHAIN, Material.IRON_NUGGET, 11);
         registerRecipe("Minecart", Material.MINECART, Material.IRON_INGOT, 5);
-        registerRecipe("Cauldron", Material.CAULDRON, Material.IRON_INGOT, 7);
+        registerRecipe("FlintAndSteel", Material.FLINT_AND_STEEL, Material.IRON_INGOT, 1);
+        registerRecipe("Crossbow", Material.CROSSBOW, Material.IRON_INGOT, 1);
+        registerRecipe("Shield", Material.SHIELD, Material.IRON_INGOT, 1);
 
         // Rotten flesh to leather
         registerRecipe("RottenFlesh", Material.LEATHER, Material.ROTTEN_FLESH, 1);
@@ -125,124 +152,100 @@ public class RecyclingFoundry extends JavaPlugin implements Listener {
                 - (double) e.getSource().getDurability()) / (double) e.getSource().getType().getMaxDurability();
 
         switch (e.getSource().getType()) {
-            case NETHERITE_SWORD:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
-                break;
-            case NETHERITE_PICKAXE:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
-                break;
-            case NETHERITE_AXE:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
-                break;
-            case NETHERITE_SHOVEL:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
-                break;
-            case NETHERITE_HOE:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
-                break;
-            case NETHERITE_HELMET:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
-                break;
-            case NETHERITE_CHESTPLATE:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
-                break;
-            case NETHERITE_LEGGINGS:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
-                break;
-            case NETHERITE_BOOTS:
-                e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
-                break;
+            case NETHERITE_SWORD -> e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+            case NETHERITE_PICKAXE -> e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+            case NETHERITE_AXE -> e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+            case NETHERITE_SHOVEL -> e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+            case NETHERITE_HOE -> e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+            case NETHERITE_HELMET -> e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+            case NETHERITE_CHESTPLATE -> e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+            case NETHERITE_LEGGINGS -> e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+            case NETHERITE_BOOTS -> e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
 
-            case DIAMOND_SWORD:
-                e.setResult(new ItemStack(Material.DIAMOND, (int) (2 * durabilityPercent)));
-                break;
-            case DIAMOND_PICKAXE:
-                e.setResult(new ItemStack(Material.DIAMOND, (int) (3 * durabilityPercent)));
-                break;
-            case DIAMOND_AXE:
-                e.setResult(new ItemStack(Material.DIAMOND, (int) (3 * durabilityPercent)));
-                break;
-            case DIAMOND_SHOVEL:
-                e.setResult(new ItemStack(Material.DIAMOND, (int) (1 * durabilityPercent)));
-                break;
-            case DIAMOND_HOE:
-                e.setResult(new ItemStack(Material.DIAMOND, (int) (2 * durabilityPercent)));
-                break;
-            case DIAMOND_HELMET:
-                e.setResult(new ItemStack(Material.DIAMOND, (int) (5 * durabilityPercent)));
-                break;
-            case DIAMOND_CHESTPLATE:
-                e.setResult(new ItemStack(Material.DIAMOND, (int) (8 * durabilityPercent)));
-                break;
-            case DIAMOND_LEGGINGS:
-                e.setResult(new ItemStack(Material.DIAMOND, (int) (7 * durabilityPercent)));
-                break;
-            case DIAMOND_BOOTS:
-                e.setResult(new ItemStack(Material.DIAMOND, (int) (4 * durabilityPercent)));
-                break;
+            case DIAMOND_SWORD -> e.setResult(new ItemStack(Material.DIAMOND, (int) (2 * durabilityPercent)));
+            case DIAMOND_PICKAXE -> e.setResult(new ItemStack(Material.DIAMOND, (int) (3 * durabilityPercent)));
+            case DIAMOND_AXE -> e.setResult(new ItemStack(Material.DIAMOND, (int) (3 * durabilityPercent)));
+            case DIAMOND_SHOVEL -> e.setResult(new ItemStack(Material.DIAMOND, (int) (1 * durabilityPercent)));
+            case DIAMOND_HOE -> e.setResult(new ItemStack(Material.DIAMOND, (int) (2 * durabilityPercent)));
+            case DIAMOND_HELMET -> e.setResult(new ItemStack(Material.DIAMOND, (int) (5 * durabilityPercent)));
+            case DIAMOND_CHESTPLATE -> e.setResult(new ItemStack(Material.DIAMOND, (int) (8 * durabilityPercent)));
+            case DIAMOND_LEGGINGS -> e.setResult(new ItemStack(Material.DIAMOND, (int) (7 * durabilityPercent)));
+            case DIAMOND_BOOTS -> e.setResult(new ItemStack(Material.DIAMOND, (int) (4 * durabilityPercent)));
 
-            case IRON_SWORD:
-                e.setResult(new ItemStack(Material.IRON_INGOT, (int) (2 * durabilityPercent)));
-                break;
-            case IRON_PICKAXE:
-                e.setResult(new ItemStack(Material.IRON_INGOT, (int) (3 * durabilityPercent)));
-                break;
-            case IRON_AXE:
-                e.setResult(new ItemStack(Material.IRON_INGOT, (int) (3 * durabilityPercent)));
-                break;
-            case IRON_SHOVEL:
-                e.setResult(new ItemStack(Material.IRON_INGOT, (int) (1 * durabilityPercent)));
-                break;
-            case IRON_HOE:
-                e.setResult(new ItemStack(Material.IRON_INGOT, (int) (2 * durabilityPercent)));
-                break;
-            case IRON_HELMET:
-                e.setResult(new ItemStack(Material.IRON_INGOT, (int) (5 * durabilityPercent)));
-                break;
-            case IRON_CHESTPLATE:
-                e.setResult(new ItemStack(Material.IRON_INGOT, (int) (8 * durabilityPercent)));
-                break;
-            case IRON_LEGGINGS:
-                e.setResult(new ItemStack(Material.IRON_INGOT, (int) (7 * durabilityPercent)));
-                break;
-            case IRON_BOOTS:
-                e.setResult(new ItemStack(Material.IRON_INGOT, (int) (4 * durabilityPercent)));
-                break;
+            case GOLDEN_SWORD -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (2 * durabilityPercent)));
+            case GOLDEN_PICKAXE -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (3 * durabilityPercent)));
+            case GOLDEN_AXE -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (3 * durabilityPercent)));
+            case GOLDEN_SHOVEL -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (1 * durabilityPercent)));
+            case GOLDEN_HOE -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (2 * durabilityPercent)));
+            case GOLDEN_HELMET -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (5 * durabilityPercent)));
+            case GOLDEN_CHESTPLATE -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (8 * durabilityPercent)));
+            case GOLDEN_LEGGINGS -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (7 * durabilityPercent)));
+            case GOLDEN_BOOTS -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (4 * durabilityPercent)));
 
-            case GOLDEN_SWORD:
-                e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (2 * durabilityPercent)));
-                break;
-            case GOLDEN_PICKAXE:
-                e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (3 * durabilityPercent)));
-                break;
-            case GOLDEN_AXE:
-                e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (3 * durabilityPercent)));
-                break;
-            case GOLDEN_SHOVEL:
-                e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (1 * durabilityPercent)));
-                break;
-            case GOLDEN_HOE:
-                e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (2 * durabilityPercent)));
-                break;
-            case GOLDEN_HELMET:
-                e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (5 * durabilityPercent)));
-                break;
-            case GOLDEN_CHESTPLATE:
-                e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (8 * durabilityPercent)));
-                break;
-            case GOLDEN_LEGGINGS:
-                e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (7 * durabilityPercent)));
-                break;
-            case GOLDEN_BOOTS:
-                e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (4 * durabilityPercent)));
-                break;
+            case IRON_SWORD -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (2 * durabilityPercent)));
+            case IRON_PICKAXE -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (3 * durabilityPercent)));
+            case IRON_AXE -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (3 * durabilityPercent)));
+            case IRON_SHOVEL -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (1 * durabilityPercent)));
+            case IRON_HOE -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (2 * durabilityPercent)));
+            case IRON_HELMET -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (5 * durabilityPercent)));
+            case IRON_CHESTPLATE -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (8 * durabilityPercent)));
+            case IRON_LEGGINGS -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (7 * durabilityPercent)));
+            case IRON_BOOTS -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (4 * durabilityPercent)));
 
-            case SHEARS:
-                e.setResult(new ItemStack(Material.IRON_INGOT, (int) (2 * durabilityPercent)));
-                break;
+            case STONE_SWORD -> e.setResult(new ItemStack(Material.STONE, (int) (2 * durabilityPercent)));
+            case STONE_PICKAXE -> e.setResult(new ItemStack(Material.STONE, (int) (3 * durabilityPercent)));
+            case STONE_AXE -> e.setResult(new ItemStack(Material.STONE, (int) (3 * durabilityPercent)));
+            case STONE_SHOVEL -> e.setResult(new ItemStack(Material.STONE, (int) (1 * durabilityPercent)));
+            case STONE_HOE -> e.setResult(new ItemStack(Material.STONE, (int) (2 * durabilityPercent)));
 
-            default:
-                break;
+            case WOODEN_SWORD -> e.setResult(new ItemStack(Material.OAK_PLANKS, (int) (2 * durabilityPercent)));
+            case WOODEN_PICKAXE -> e.setResult(new ItemStack(Material.OAK_PLANKS, (int) (3 * durabilityPercent)));
+            case WOODEN_AXE -> e.setResult(new ItemStack(Material.OAK_PLANKS, (int) (3 * durabilityPercent)));
+            case WOODEN_SHOVEL -> e.setResult(new ItemStack(Material.OAK_PLANKS, (int) (1 * durabilityPercent)));
+            case WOODEN_HOE -> e.setResult(new ItemStack(Material.OAK_PLANKS, (int) (2 * durabilityPercent)));
+
+            case LODESTONE -> e.setResult(new ItemStack(Material.NETHERITE_INGOT, (int) (1 * durabilityPercent)));
+
+            case DIAMOND_HORSE_ARMOR -> e.setResult(new ItemStack(Material.DIAMOND, (int) (3 * durabilityPercent)));
+            case ENCHANTING_TABLE -> e.setResult(new ItemStack(Material.DIAMOND, (int) (2 * durabilityPercent)));
+            case JUKEBOX -> e.setResult(new ItemStack(Material.DIAMOND, (int) (1 * durabilityPercent)));
+
+            case GOLDEN_HORSE_ARMOR -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (3 * durabilityPercent)));
+            case LIGHT_WEIGHTED_PRESSURE_PLATE -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (2 * durabilityPercent)));
+            case POWERED_RAIL -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (1 * durabilityPercent)));
+            case CLOCK -> e.setResult(new ItemStack(Material.GOLD_INGOT, (int) (4 * durabilityPercent)));
+
+            case IRON_HORSE_ARMOR -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (3 * durabilityPercent)));
+            case HEAVY_WEIGHTED_PRESSURE_PLATE -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (2 * durabilityPercent)));
+            case ACTIVATOR_RAIL -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (1 * durabilityPercent)));
+            case DETECTOR_RAIL -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (1 * durabilityPercent)));
+            case RAIL -> e.setResult(new ItemStack(Material.IRON_NUGGET, (int) (3 * durabilityPercent)));
+            case IRON_BARS -> e.setResult(new ItemStack(Material.IRON_NUGGET, (int) (3 * durabilityPercent)));
+            case IRON_DOOR -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (2 * durabilityPercent)));
+            case IRON_TRAPDOOR -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (4 * durabilityPercent)));
+            case ANVIL -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (31 * durabilityPercent)));
+            case CAULDRON -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (7 * durabilityPercent)));
+            case BLAST_FURNACE -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (5 * durabilityPercent)));
+            case SMITHING_TABLE -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (2 * durabilityPercent)));
+            case STONECUTTER -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (1 * durabilityPercent)));
+            case LANTERN -> e.setResult(new ItemStack(Material.IRON_NUGGET, (int) (8 * durabilityPercent)));
+            case CHAIN -> e.setResult(new ItemStack(Material.IRON_NUGGET, (int) (11 * durabilityPercent)));
+            case TRIPWIRE_HOOK -> e.setResult(new ItemStack(Material.IRON_NUGGET, (int) (4 * durabilityPercent)));
+            case HOPPER -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (5 * durabilityPercent)));
+            case COMPASS -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (4 * durabilityPercent)));
+            case SHEARS -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (2 * durabilityPercent)));
+            case BUCKET -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (3 * durabilityPercent)));
+            case MINECART -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (5 * durabilityPercent)));
+            case FLINT_AND_STEEL -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (1 * durabilityPercent)));
+            case CROSSBOW -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (1 * durabilityPercent)));
+            case SHIELD -> e.setResult(new ItemStack(Material.IRON_INGOT, (int) (1 * durabilityPercent)));
+
+            case LEATHER -> e.setResult(new ItemStack(Material.ROTTEN_FLESH, (int) (1 * durabilityPercent)));
+
+            case POISONOUS_POTATO -> e.setResult(new ItemStack(Material.POTATO, (int) (2 * durabilityPercent)));
+
+            default -> {
+            }
         }
     }
 }
