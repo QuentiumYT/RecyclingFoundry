@@ -16,11 +16,11 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.spigotmc:spigot-api:1.20.1-R0.1-SNAPSHOT'
+    compileOnly 'org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT'
 }
 
 group = 'fr.frakass.recyclingfoundry'
-version = '1.2.0'
+version = '1.3.0'
 def name = getRootProject().getName()
 description = 'A simple but useful foundry plugin to smelt your unneeded items'
 java.sourceCompatibility = JavaVersion.VERSION_17
